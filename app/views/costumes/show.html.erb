@@ -1,4 +1,5 @@
 <h2>Name:<%= @costume.name %></h2>
+<%= image_tag @costume.image_url , alt:"costume image", class: "show-image" %>
 <p>Description:<%= @costume.description %></p>
 <p>Price:<%= @costume.price %></p>
 <h5><button><%= link_to "Check All Costumes", costumes_path, class: "no-underline" %></button></h5>
