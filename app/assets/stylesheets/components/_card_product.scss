@@ -1,3 +1,5 @@
+
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -23,4 +25,9 @@ button {
 button:hover {
   background-color: rgb(150, 150, 150);
   transition: background-color 0.5s;
+}
+
+.no-underline {
+  text-decoration: none;
+  color: black;
 }

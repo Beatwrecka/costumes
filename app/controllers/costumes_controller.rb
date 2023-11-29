@@ -1,6 +1,7 @@
 class CostumesController < ApplicationController
   def index
     @costumes = Costume.all
+    @products = (1..5).to_a
   end
 
   def show
