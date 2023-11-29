@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "costumes#index"
   resources :costumes
+  devise_for :users
 end

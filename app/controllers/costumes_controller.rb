@@ -17,6 +17,12 @@ class CostumesController < ApplicationController
     redirect_to costume_path(@costume)
   end
 
+  def destroy
+    @costume = Costume.find(params[:id])
+    @costume.destroy
+    redirect_to costumes_path, status: :see_other
+  end
+
   private
 
   def costume_params

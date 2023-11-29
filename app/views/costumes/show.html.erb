@@ -5,4 +5,9 @@
 <% @costume.photos.each do |photo| %>
   <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
 <% end %>
-<%= link_to "+Add a new Costume", costumes_new_path %>
+<%# <%= link_to "+Add a new Costume", costumes_path %>
+<br>
+<%= link_to "Delete Costume",
+  costume_path(@costume),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
