@@ -1,2 +1,18 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+  <div class="text-center m-3 home-image">
+    <%= image_tag "costumes_kids.jpg", alt:"costume image", class: "costumes-image" %>
+  </div>
+
+  <div class="cards">
+    <% @products.each do |product| %>
+      <div class="card-product">
+        <%=image_tag "santa_costume.jpg", alt:"costume image", class: "card-image" %>
+        <div class="card-info p-3">
+          <h2 class="font-weight-bold">Santa Claus</h2>
+          <h4>Price: 15$</h4>
+          <h5><button>See details</button></h5>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
