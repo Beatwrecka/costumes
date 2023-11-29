@@ -13,15 +13,16 @@ Costume.destroy_all
 
 puts "Creating db"
 
-Costume.create(name: "Historical Costume of the 1700s", description: "Historical costume reproduction from the 18th century, handmade in taffeta and enriched with trimmings and lace
+Costume.create(image_url: "red.png", name: "Darth Vader", description: "Historical costume reproduction from the 18th century, handmade in taffeta and enriched with trimmings and lace
+  Comprehends Jacket, waistcoat and trousers", price: 200 )
+Costume.create(image_url: "pink.png", name: "Ballerina ", description: "Historical costume reproduction from the 18th century, handmade in taffeta and enriched with trimmings and lace
+  Comprehends Jacket, waistcoat and trousers", price: 300)
+Costume.create(image_url: "kid.png", name: "Mr, T Costume", description: "Historical costume reproduction from the 18th century, handmade in taffeta and enriched with trimmings and lace
+  Comprehends Jacket, waistcoat and trousers", price: 250)
+Costume.create(image_url: "dress.png", name: "Historical Costume of the 1800s", description: "Historical costume reproduction from the 18th century, handmade in taffeta and enriched with trimmings and lace
   Comprehends Jacket, waistcoat and trousers", price: 200)
-Costume.create(name: "Historical Costume of the 1700s", description: "Historical costume reproduction from the 18th century, handmade in taffeta and enriched with trimmings and lace
-  Comprehends Jacket, waistcoat and trousers", price: 200)
-Costume.create(name: "Historical Costume of the 1700s", description: "Historical costume reproduction from the 18th century, handmade in taffeta and enriched with trimmings and lace
-  Comprehends Jacket, waistcoat and trousers", price: 200)
-Costume.create(name: "Historical Costume of the 1800s", description: "Historical costume reproduction from the 18th century, handmade in taffeta and enriched with trimmings and lace
-  Comprehends Jacket, waistcoat and trousers", price: 200)
-Costume.create(name: "Historical Costume of the 1900s", description: "Historical costume reproduction from the 18th century, handmade in taffeta and enriched with trimmings and lace
-  Comprehends Jacket, waistcoat and trousers", price: 200)
-
+Costume.create(image_url: "donald.png", name: "Donald Trump Costume", description: "Historical costume reproduction from the 18th century, handmade in taffeta and enriched with trimmings and lace
+  Comprehends Jacket, waistcoat and trousers", price: 150)
+Costume.create(image_url: "centa.png", name: "Santa Claus", description: "Historical costume reproduction from the 18th century, handmade in taffeta and enriched with trimmings and lace
+    Comprehends Jacket, waistcoat and trousers", price: 150)
 puts "done"
