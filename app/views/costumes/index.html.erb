@@ -1,9 +1,8 @@
-<h1>All Costumes</h1>
-
 <div class="container">
-  <div class="text-center m-3 home-image">
-    <%= image_tag "costumes_kids.jpg", alt:"costume image", class: "costumes-image" %>
+  <div class="text-center m-3 home-banner">
+    <h1 class="text-center text-banner">Rent a costume!</h1>
   </div>
+  <h5 class="more-margin"><button><%= link_to "Add a new Costume", new_costume_path(@costume), class: "no-underline"%></button></h5>
 
   <div class="cards">
     <% @costumes.each do |costume| %>
@@ -17,5 +16,4 @@
       </div>
     <% end %>
   </div>
-  <%= link_to "Add a new Costume", new_costume_path(@costume)%>
 </div>
