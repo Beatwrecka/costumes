@@ -1,9 +1,21 @@
 <h1>All Costumes</h1>
-<ul>
-  <% @costumes.each do |costume| %>
-  <li>
-  <%= link_to costume.name, costume_path(costume.id) %>
- </li>
- <% end %>
-</ul>
-<%= link_to "Add a new Costume", new_costume_path(@costume)%>
+
+<div class="container">
+  <div class="text-center m-3 home-image">
+    <%= image_tag "costumes_kids.jpg", alt:"costume image", class: "costumes-image" %>
+  </div>
+
+  <div class="cards">
+    <% @costumes.each do |costume| %>
+      <div class="card-product">
+        <%=image_tag "santa_costume.jpg", alt:"costume image", class: "card-image" %>
+        <div class="card-info p-3">
+          <h2 class="font-weight-bold"><%= costume.name %></h2>
+          <h4>Price: <%= costume.price %>$</h4>
+          <h5><button><%= link_to "See details", costume_path(costume.id), class: "no-underline" %></button></h5>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <%= link_to "Add a new Costume", new_costume_path(@costume)%>
+</div>

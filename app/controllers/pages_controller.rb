@@ -11,5 +11,6 @@ class PagesController < ApplicationController
   end
 
   def home
+    @products = (1..5).to_a
   end
 end
