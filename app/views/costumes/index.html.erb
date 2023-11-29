@@ -8,7 +8,7 @@
   <div class="cards">
     <% @costumes.each do |costume| %>
       <div class="card-product">
-        <%=image_tag "santa_costume.jpg", alt:"costume image", class: "card-image" %>
+        <%= image_tag costume.image_url , alt:"costume image", class: "card-image" %>
         <div class="card-info p-3">
           <h2 class="font-weight-bold"><%= costume.name %></h2>
           <h4>Price: <%= costume.price %>$</h4>
