@@ -1,5 +1,5 @@
 <h2><%= @costume.name %></h2>
-<%= image_tag @costume.image_url , alt:"costume image", class: "show-image" %>
+<%= cl_image_tag @costume.photos.first.key , alt:"costume image", class: "show-image" %>
 <p><strong>Description:</strong> <%= @costume.description %></p>
 <p><strong>Price:</strong> <%= @costume.price %>$</p>
 <h5><button><%= link_to "Check All Costumes", costumes_path, class: "no-underline" %></button></h5>
@@ -12,3 +12,5 @@
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
   class: "no-underline"
 %></button></h5>
+
+<h5><button><%= link_to "Book a Costume", costumes_path, class: "no-underline" %></h5>
