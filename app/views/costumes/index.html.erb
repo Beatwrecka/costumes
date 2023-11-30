@@ -7,7 +7,7 @@
   <div class="cards">
     <% @costumes.each do |costume| %>
       <a href="<%= costume_path(costume.id)%>" class="card-product">
-        <%= image_tag costume.image_url , alt:"costume image", class: "card-image" %>
+        <%= cl_image_tag costume.photos.first.key , alt:"costume image", class: "card-image" %>
         <div class="card-info p-3">
           <h6 class="font-weight-bold text-center"><%= costume.name %></h6>
           <p class="text-center"><%= costume.price %>$</p>

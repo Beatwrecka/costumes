@@ -30,3 +30,19 @@
     class: "no-underline"
   %></button></h5>
 </div>
+<h2><%= @costume.name %></h2>
+<%= cl_image_tag @costume.photos.first.key , alt:"costume image", class: "show-image" %>
+<p><strong>Description:</strong> <%= @costume.description %></p>
+<p><strong>Price:</strong> <%= @costume.price %>$</p>
+<h5><button><%= link_to "Check All Costumes", costumes_path, class: "no-underline" %></button></h5>
+<% @costume.photos.each do |photo| %>
+  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
+<br>
+<h5><button><%= link_to "Delete Costume",
+  costume_path(@costume),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+  class: "no-underline"
+%></button></h5>
+
+<h5><button><%= link_to "Book a Costume", costumes_path, class: "no-underline" %></h5>
