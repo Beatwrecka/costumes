@@ -5,7 +5,7 @@
       <h1><%= @costume.name %></h1>
       <h2><strong><%= @costume.price %>$</strong></h2>
       <p><strong>Description:</strong> <%= @costume.description %></p>
-      <h5><button><%= link_to "Book this costume", costumes_path, class: "no-underline" %></h5>
+      <h5><button><%= link_to "Book this costume", new_costume_booking_path(@costume), class: "no-underline" %></h5>
       <br>
       <h5><button><%= link_to "Delete Costume",
         costume_path(@costume),
