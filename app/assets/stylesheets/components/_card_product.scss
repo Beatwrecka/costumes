@@ -2,19 +2,22 @@
 
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 10px !important;
-  grid-row-gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 5px;
+  grid-row-gap: 10px;
   place-items: center;
 }
 
 .card-product {
+  font-family: "Oswald";
   display: flex;
-  height: 200px;
-  width: 400px;
+  flex-direction: column;
+  height: 350px;
+  width: 250px;
   background-color: white;
   text-decoration: none;
   color: black;
+  border-radius: 10px;
 }
 
 
@@ -35,6 +38,6 @@ button:hover {
   color: black;
 }
 
-.show-image {
-  width: 300px;
+.card-image {
+  border-radius: 10px;
 }
