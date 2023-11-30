@@ -1,9 +1,12 @@
 <div class="container">
-  <div class="text-center m-3 home-banner">
+  <div class="button-container">
+    <h5 class="add-new-button"><button><%= link_to "Add a new Costume", new_costume_path(@costume), class: "no-underline"%></button></h5>
+  </div>
+  <div class="text-center home-banner">
     <h1 class="text-center text-banner">Rent a costume!</h1>
   </div>
-  <h5 class="margin-left"><button><%= link_to "Add a new Costume", new_costume_path(@costume), class: "no-underline"%></button></h5>
 
+  <h4 class="recommendations">Our recommendations :</h4>
   <div class="cards">
     <% @costumes.each do |costume| %>
       <a href="<%= costume_path(costume.id)%>" class="card-product">

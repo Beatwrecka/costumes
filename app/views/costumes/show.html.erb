@@ -1,20 +1,30 @@
 <div class="container">
   <div class="infos">
-    <%= image_tag @costume.image_url , alt:"costume image", class: "show-image" %>
+    <%= cl_image_tag @costume.photos.first.key , alt:"costume image", class: "show-image" %>
     <div class="infos-text">
       <h1><%= @costume.name %></h1>
       <h2><strong><%= @costume.price %>$</strong></h2>
       <p><strong>Description:</strong> <%= @costume.description %></p>
+      <h5><button><%= link_to "Book this costume", costumes_path, class: "no-underline" %></h5>
+      <br>
+      <h5><button><%= link_to "Delete Costume",
+        costume_path(@costume),
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+        class: "no-underline"
+      %></button></h5>
     </div>
   </div>
 
-  <h5><button><%= link_to "All Costumes", costumes_path, class: "no-underline" %></button></h5>
+
   <div class="similar-costumes">
-    <h6 class="m-4">Articles you might like</h6>
+    <div class="similar-navbar">
+      <h5 class="m-4">Articles you might like</h5>
+      <h5><button><%= link_to "All Costumes", costumes_path, class: "no-underline" %></button></h5>
+    </div>
     <div class="all-costumes">
       <% @costumes.sample(5).each do |costume| %>
           <a href="<%= costume_path(costume.id)%>" class="show-card-product">
-            <%= image_tag costume.image_url , alt:"costume image", class: "all-costumes-images" %>
+            <%= cl_image_tag costume.photos.first.key , alt:"costume image", class: "all-costumes-images" %>
             <div class="card-info p-3">
               <h6 class="font-weight-bold text-center"><%= costume.name %></h6>
               <p class="text-center"><%= costume.price %>$</p>
@@ -23,12 +33,4 @@
         <% end %>
     </div>
   </div>
-  <br>
-  <h5><button><%= link_to "Delete Costume",
-    costume_path(@costume),
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
-    class: "no-underline"
-  %></button></h5>
 </div>
-
-<h5><button><%= link_to "Book a Costume", costumes_path, class: "no-underline" %></h5>
