@@ -1,0 +1,42 @@
+.infos {
+  display: flex;
+  margin: 50px;
+}
+
+.infos-text {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  margin-top: 0px;
+}
+
+.show-image {
+  width: 500px;
+}
+
+.similar-costumes {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.all-costumes {
+  display: flex;
+}
+
+.all-costumes-images {
+  border-radius: 10px;
+}
+
+.show-card-product {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  margin-top: 5px;
+  height: 300px;
+  width: 200px;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  border-radius: 10px;
+}
