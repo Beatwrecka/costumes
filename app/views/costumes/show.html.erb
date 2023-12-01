@@ -7,13 +7,20 @@
       <p><strong>Description:</strong> <%= @costume.description %></p>
       <h5><button><%= link_to "Book this costume", new_costume_booking_path(@costume), class: "no-underline" %></h5>
       <br>
-      <h5><button><%= link_to "Delete Costume",
+<%#       <h5><button><%= link_to "Delete Costume",
         costume_path(@costume),
         data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
         class: "no-underline"
       %></button></h5>
+
+      <%= button_tag type: 'button' do %>
+        <%= image_tag '/images/trash-can.ico', size: '16x16', alt: 'Favicon' %>
+
+        <% end %>
     </div>
   </div>
+
+     <link rel="icon" type="image/x-icon" href="/images/cart-shopping-solid.svg">
 
 
   <div class="similar-costumes">
