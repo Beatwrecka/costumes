@@ -22,24 +22,9 @@
   box-shadow: 1px 1px 3px rgb(99, 94, 94);
 }
 
-
-button {
-  /* background-color: rgb(203, 203, 203); */
-  background-color: $gray2;
-  padding: 5px;
-  border-radius: 5px;
-  border: none;
-  box-shadow: 1px 1px 3px rgb(99, 94, 94);
-}
-
-button:hover {
-  background-color: rgb(150, 150, 150);
-  transition: background-color 0.5s;
-}
-
 .no-underline {
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .card-image {
