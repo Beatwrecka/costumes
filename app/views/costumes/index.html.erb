@@ -1,6 +1,10 @@
 <div class="container">
   <div class="button-container">
-    <h5 class="add-new-button"><button><%= link_to "Add a new Costume", new_costume_path(@costume), class: "no-underline"%></button></h5>
+    <h5><button class="add-new-button">
+      <%= link_to new_costume_path(@costume), class: "no-underline" do %>
+        <%= image_tag("icons8-plus-50.png") %>
+        <% end %>
+    </button></h5>
   </div>
   <div class="text-center home-banner">
     <h1 class="text-center text-banner"></h1>
