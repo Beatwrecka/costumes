@@ -6,6 +6,7 @@
   grid-column-gap: 5px;
   grid-row-gap: 10px;
   place-items: center;
+ /*  box-shadow: 3px 3px 3px red; */
 }
 
 .card-product {
@@ -18,6 +19,7 @@
   text-decoration: none;
   color: black;
   border-radius: 10px;
+  box-shadow: 1px 1px 3px rgb(99, 94, 94);
 }
 
 .no-underline {
@@ -27,4 +29,5 @@
 
 .card-image {
   border-radius: 10px;
+  box-shadow: 1px 1px 3px rgb(99, 94, 94);
 }

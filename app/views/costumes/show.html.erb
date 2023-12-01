@@ -8,24 +8,14 @@
           <p><strong>Description:</strong> <%= @costume.description %></p>
           <h5><button><%= link_to "Book this costume", new_costume_booking_path(@costume), class: "no-underline" %></h5>
       </div>
-    </div>
-    <div class="delete-button">
-          <br>
-          <%#       <h5><button><%= link_to "Delete Costume",
-            costume_path(@costume),
-            data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
-            class: "no-underline"
-          %></button></h5>
-
-          <%= button_tag type: 'button' do %>
-            <%= image_tag '/images/trash-can.ico', size: '16x16', alt: 'Favicon' %>
-
-            <% end %>
+      <div class="delete-button">
+          <%= button_tag type: 'button', class: "Btn Btn-danger", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+            <%= content_tag(:i, "", class: "fas fa-trash") %>
+            <%= link_to "", costume_path(@costume), method: :delete, class: "no-underline" %>
+          <% end %>
       </div>
+    </div>
   </div>
-
-     <link rel="icon" type="image/x-icon" href="/images/cart-shopping-solid.svg">
-
 
   <div class="similar-costumes">
     <div class="similar-navbar">
