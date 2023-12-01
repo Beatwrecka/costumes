@@ -2,16 +2,18 @@
   <div class="infos">
     <%= cl_image_tag @costume.photos.first.key , alt:"costume image", class: "show-image" %>
     <div class="infos-text">
-      <h1><%= @costume.name %></h1>
-      <h2><strong><%= @costume.price %>$</strong></h2>
-      <p><strong>Description:</strong> <%= @costume.description %></p>
-      <h5><button><%= link_to "Book this costume", new_costume_booking_path(@costume), class: "no-underline" %></h5>
-      <br>
-      <h5><button><%= link_to "Delete Costume",
-        costume_path(@costume),
-        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
-        class: "no-underline"
-      %></button></h5>
+      <h1><strong><%= @costume.name %></strong></h1>
+      <h2><%= @costume.price %>$</h2>
+      <h5><strong>Description:</strong> <%= @costume.description %></h5>
+      <div class="costume-actions">
+        <h5><button><%= link_to "Book this costume", new_costume_booking_path(@costume), class: "no-underline" %></h5>
+        <br>
+        <h5><button><%= link_to "Delete Costume",
+          costume_path(@costume),
+          data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+          class: "no-underline"
+        %></button></h5>
+      </div>
     </div>
   </div>
 
