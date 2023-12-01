@@ -9,10 +9,11 @@
           <h5><button><%= link_to "Book this costume", new_costume_booking_path(@costume), class: "no-underline" %></h5>
       </div>
       <div class="delete-button">
-          <%= button_tag type: 'button', class: "Btn Btn-danger", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+        <%= link_to costume_path(@costume), method: :delete, class: "no-underline", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do  %>
+          <%= button_tag type: 'button', class: "Btn Btn-danger" do %>
             <%= content_tag(:i, "", class: "fas fa-trash") %>
-            <%= link_to "", costume_path(@costume), method: :delete, class: "no-underline" %>
           <% end %>
+        <% end %>
       </div>
     </div>
   </div>
