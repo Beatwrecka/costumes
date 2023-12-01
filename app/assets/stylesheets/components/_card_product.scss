@@ -20,22 +20,6 @@
   border-radius: 10px;
 }
 
-
-button {
-  background-color: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
-  padding: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
-  border-radius: 3px;
-  border: none;
-}
-
-button:hover {
-  background-color: rgb(150, 150, 150);
-  transition: background-color 0.5s;
-}
-
 .no-underline {
   text-decoration: none;
   color: rgb(255, 255, 255);
