@@ -6,6 +6,7 @@
   grid-column-gap: 5px;
   grid-row-gap: 10px;
   place-items: center;
+ /*  box-shadow: 3px 3px 3px red; */
 }
 
 .card-product {
@@ -18,14 +19,17 @@
   text-decoration: none;
   color: black;
   border-radius: 10px;
+  box-shadow: 1px 1px 3px rgb(99, 94, 94);
 }
 
 
 button {
-  background-color: rgb(203, 203, 203);
+  /* background-color: rgb(203, 203, 203); */
+  background-color: $blue;
   padding: 5px;
   border-radius: 5px;
   border: none;
+  box-shadow: 1px 1px 3px rgb(99, 94, 94);
 }
 
 button:hover {
@@ -40,4 +44,5 @@ button:hover {
 
 .card-image {
   border-radius: 10px;
+  box-shadow: 1px 1px 3px rgb(99, 94, 94);
 }
