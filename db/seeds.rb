@@ -104,5 +104,15 @@ costume20 = Costume.create( name: "Top Gun", description: "The Queen B really lo
 costume20.photos.attach(io: file20, filename: "centa.png", content_type: "image/png")
 costume20.save
 
+file21 = File.open(File.join(__dir__, "../app/assets/images/Dareus.png"))
+costume21 = Costume.create( name: "Dodgy character #1", description: "One of our scarier Halloween costumes.", price: 250 )
+costume21.photos.attach(io: file21, filename: "Dareos.png", content_type: "image/png")
+costume21.save
+
+file22 = File.open(File.join(__dir__, "../app/assets/images/Arbi.png"))
+costume22 = Costume.create( name: "Dodgy character #2", description: "The second member of the dodgy duo.", price: 250 )
+costume22.photos.attach(io: file22, filename: "Arbi.png", content_type: "image/png")
+costume22.save
+
 
 puts "done"
