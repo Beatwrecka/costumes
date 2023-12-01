@@ -1,10 +1,16 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+ */
+/* <style> */
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap');
 
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200;400&display=swap');
+
+/* </style> */
 // Define fonts for body and headers
-
-$body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
+$body-font: "font-family: 'Bebas Neue', sans-serif";
+$headers-font: "font-family: 'Oswald', sans-serif;";
+/* $headers-font: "Nunito", "Helvetica", "sans-serif"; */
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {

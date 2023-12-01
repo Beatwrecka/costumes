@@ -1,14 +1,43 @@
-<h2><%= @costume.name %></h2>
-<%= image_tag @costume.image_url , alt:"costume image", class: "show-image" %>
-<p><strong>Description:</strong> <%= @costume.description %></p>
-<p><strong>Price:</strong> <%= @costume.price %>$</p>
-<h5><button><%= link_to "Check All Costumes", costumes_path, class: "no-underline" %></button></h5>
-<% @costume.photos.each do |photo| %>
-  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-<% end %>
-<br>
-<h5><button><%= link_to "Delete Costume",
-  costume_path(@costume),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
-  class: "no-underline"
-%></button></h5>
+<div class="container">
+  <div class="infos">
+    <%= cl_image_tag @costume.photos.first.key , alt:"costume image", class: "show-image" %>
+    <div class="infos-text">
+      <h1><%= @costume.name %></h1>
+      <h2><strong><%= @costume.price %>$</strong></h2>
+      <p><strong>Description:</strong> <%= @costume.description %></p>
+      <h5><button><%= link_to "Book this costume", new_costume_booking_path(@costume), class: "no-underline" %></h5>
+      <br>
+<%#       <h5><button><%= link_to "Delete Costume",
+        costume_path(@costume),
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+        class: "no-underline"
+      %></button></h5>
+
+      <%= button_tag type: 'button' do %>
+        <%= image_tag '/images/trash-can.ico', size: '16x16', alt: 'Favicon' %>
+
+        <% end %>
+    </div>
+  </div>
+
+     <link rel="icon" type="image/x-icon" href="/images/cart-shopping-solid.svg">
+
+
+  <div class="similar-costumes">
+    <div class="similar-navbar">
+      <h5 class="m-4">Articles you might like</h5>
+      <h5><button><%= link_to "All Costumes", costumes_path, class: "no-underline" %></button></h5>
+    </div>
+    <div class="all-costumes">
+      <% @costumes.sample(5).each do |costume| %>
+          <a href="<%= costume_path(costume.id)%>" class="show-card-product">
+            <%= cl_image_tag costume.photos.first.key , alt:"costume image", class: "all-costumes-images" %>
+            <div class="card-info p-3">
+              <h6 class="font-weight-bold text-center"><%= costume.name %></h6>
+              <p class="text-center"><%= costume.price %>$</p>
+          </div>
+          </a>
+        <% end %>
+    </div>
+  </div>
+</div>
